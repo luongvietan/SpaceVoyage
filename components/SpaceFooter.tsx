@@ -14,12 +14,12 @@ const footerLinks = [
 
 export default function SpaceFooter() {
   return (
-    <footer className="relative min-h-screen overflow-hidden bg-[#040a14] text-white">
+    <footer className="relative min-h-screen overflow-hidden border-t border-white/8 bg-[#040a14] text-white">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_0%,rgba(95,152,224,0.2),transparent_42%),radial-gradient(circle_at_100%_100%,rgba(17,39,72,0.75),transparent_45%)]" />
 
       <div className="relative z-10 mx-auto max-w-7xl px-6 pb-10 pt-20 md:px-10 lg:px-16">
         <motion.div
-          className="liquid-glass rounded-[34px] p-7 md:p-10"
+          className="liquid-glass refine-card rounded-[34px] p-7 md:p-10"
           initial={revealInitial(20, 8)}
           whileInView={REVEAL_VISIBLE}
           viewport={REVEAL_VIEWPORT}
@@ -34,7 +34,7 @@ export default function SpaceFooter() {
               <p className="mt-4 max-w-xl text-sm leading-relaxed text-white/85 font-body md:text-base">
                 Join the next generation of explorers and creators shaping humanity&apos;s presence beyond Earth.
               </p>
-              <button className="liquid-glass-strong mt-6 inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium font-body">
+              <button className="liquid-glass-strong refine-button mt-6 inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium font-body">
                 Join Priority Waitlist
                 <ArrowUpRight className="h-4 w-4" />
               </button>
@@ -43,7 +43,7 @@ export default function SpaceFooter() {
             <div className="flex flex-col gap-6">
               <div className="grid grid-cols-2 gap-3 text-sm font-medium font-body">
                 {footerLinks.map((link) => (
-                  <a key={link.label} href={link.href} className="text-white/85 transition hover:text-white">
+                  <a key={link.label} href={link.href} className="refine-link text-white/85 hover:text-white">
                     {link.label}
                   </a>
                 ))}
@@ -68,13 +68,13 @@ export default function SpaceFooter() {
         >
           <p>© 2026 Astral Voyages. All rights reserved.</p>
           <div className="flex items-center gap-4">
-            <a href="#" className="transition hover:text-white">
+            <a href="#" className="refine-link hover:text-white">
               Privacy
             </a>
-            <a href="#" className="transition hover:text-white">
+            <a href="#" className="refine-link hover:text-white">
               Terms
             </a>
-            <a href="#" className="transition hover:text-white">
+            <a href="#" className="refine-link hover:text-white">
               Contact
             </a>
           </div>

@@ -18,6 +18,8 @@ body {
   background: hsl(var(--background));
   color: hsl(var(--foreground));
   font-family: "Barlow", sans-serif;
+  min-height: 100vh;
+  text-rendering: optimizeLegibility;
 }
 
 @layer components {
@@ -114,5 +116,40 @@ body {
     -webkit-mask-composite: xor;
     mask-composite: exclude;
     pointer-events: none;
+  }
+
+  .refine-card {
+    transition:
+      transform 280ms cubic-bezier(0.4, 0, 0.2, 1),
+      box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1),
+      border-color 280ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .refine-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 50px rgba(5, 12, 24, 0.28);
+  }
+
+  .refine-button {
+    transition:
+      transform 220ms cubic-bezier(0.4, 0, 0.2, 1),
+      box-shadow 220ms cubic-bezier(0.4, 0, 0.2, 1),
+      opacity 220ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .refine-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(10, 20, 36, 0.3);
+  }
+
+  .refine-link {
+    transition:
+      opacity 200ms ease,
+      transform 200ms ease;
+  }
+
+  .refine-link:hover {
+    opacity: 1;
+    transform: translateY(-1px);
   }
 }

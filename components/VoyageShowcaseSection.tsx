@@ -34,7 +34,7 @@ const voyageCards = [
 
 export default function VoyageShowcaseSection() {
   return (
-    <section className="relative min-h-screen overflow-hidden bg-[#0f1d33] text-foreground">
+    <section className="relative min-h-screen overflow-hidden border-t border-white/8 bg-[#0f1d33] text-foreground">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(156,188,229,0.32),transparent_45%),radial-gradient(circle_at_bottom,rgba(25,47,82,0.7),transparent_55%)]" />
 
       <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-col px-6 py-24 md:px-10 lg:px-16">
@@ -74,7 +74,7 @@ export default function VoyageShowcaseSection() {
           {voyageCards.map((card, index) => (
             <motion.article
               key={card.destination}
-              className="liquid-glass rounded-[28px] p-6"
+              className="liquid-glass refine-card rounded-[28px] p-6"
               initial={revealInitial(24, 10)}
               whileInView={REVEAL_VISIBLE}
               viewport={REVEAL_VIEWPORT}
@@ -92,7 +92,7 @@ export default function VoyageShowcaseSection() {
               <p className="text-xs tracking-[0.16em] text-white/75 uppercase font-body">{card.window}</p>
               <h3 className="mt-3 text-4xl leading-none text-white font-heading italic">{card.destination}</h3>
               <p className="mt-4 text-sm leading-relaxed text-white/85 font-body">{card.description}</p>
-              <button className="liquid-glass-strong mt-6 flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium text-white font-body">
+              <button className="liquid-glass-strong refine-button mt-6 flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium text-white font-body">
                 Explore Route
                 <ArrowUpRight className="h-4 w-4" />
               </button>

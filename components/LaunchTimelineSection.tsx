@@ -28,7 +28,7 @@ const timeline = [
 
 export default function LaunchTimelineSection() {
   return (
-    <section className="relative min-h-screen overflow-hidden bg-[#0a1323] text-white">
+    <section className="relative min-h-screen overflow-hidden border-t border-white/8 bg-[#0a1323] text-white">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_0%,rgba(115,161,220,0.34),transparent_42%),radial-gradient(circle_at_90%_80%,rgba(26,55,96,0.72),transparent_48%)]" />
 
       <div className="relative z-10 mx-auto max-w-7xl px-6 py-24 md:px-10 lg:px-16">
@@ -52,7 +52,7 @@ export default function LaunchTimelineSection() {
           <h2 className="max-w-4xl text-5xl leading-[0.86] tracking-[-2px] font-heading italic md:text-6xl lg:text-7xl">
             From First Briefing to Interplanetary Liftoff
           </h2>
-          <button className="liquid-glass-strong inline-flex w-fit items-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium font-body">
+          <button className="liquid-glass-strong refine-button inline-flex w-fit items-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium font-body">
             Reserve Mission Brief
             <ArrowUpRight className="h-4 w-4" />
           </button>
@@ -92,7 +92,7 @@ export default function LaunchTimelineSection() {
             return (
               <motion.article
                 key={item.phase}
-                className="liquid-glass grid gap-5 rounded-[30px] p-6 md:grid-cols-[120px_1fr_auto] md:items-center"
+                className="liquid-glass refine-card grid gap-5 rounded-[30px] p-6 md:grid-cols-[120px_1fr_auto] md:items-center"
                 initial={revealInitial(24, 10)}
                 whileInView={REVEAL_VISIBLE}
                 viewport={REVEAL_VIEWPORT}

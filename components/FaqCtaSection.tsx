@@ -25,7 +25,7 @@ const faqs = [
 
 export default function FaqCtaSection() {
   return (
-    <section className="relative min-h-screen overflow-hidden bg-[#060d1a] text-white">
+    <section className="relative min-h-screen overflow-hidden border-t border-white/8 bg-[#060d1a] text-white">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(101,157,226,0.2),transparent_50%),radial-gradient(circle_at_15%_100%,rgba(20,44,78,0.72),transparent_46%)]" />
 
       <div className="relative z-10 mx-auto max-w-7xl px-6 py-24 md:px-10 lg:px-16">
@@ -54,7 +54,7 @@ export default function FaqCtaSection() {
             {faqs.map((faq, index) => (
               <motion.article
                 key={faq.question}
-                className="liquid-glass rounded-[28px] p-6"
+                className="liquid-glass refine-card rounded-[28px] p-6"
                 initial={revealInitial(20, 8)}
                 whileInView={REVEAL_VISIBLE}
                 viewport={REVEAL_VIEWPORT}
@@ -72,7 +72,7 @@ export default function FaqCtaSection() {
           </div>
 
           <motion.aside
-            className="liquid-glass-strong rounded-[30px] p-7 md:p-8"
+            className="liquid-glass-strong refine-card rounded-[30px] p-7 md:p-8"
             initial={revealInitial(24, 10)}
             whileInView={REVEAL_VISIBLE}
             viewport={REVEAL_VIEWPORT}
@@ -95,7 +95,7 @@ export default function FaqCtaSection() {
               Reserve now to receive mission updates, cabin previews, and private consultation with a voyage
               specialist before public availability opens.
             </p>
-            <button className="mt-6 inline-flex items-center gap-2 rounded-full bg-white px-5 py-2.5 text-sm font-medium text-black font-body">
+            <button className="refine-button mt-6 inline-flex items-center gap-2 rounded-full bg-white px-5 py-2.5 text-sm font-medium text-black font-body">
               Book A Private Briefing
               <ArrowUpRight className="h-4 w-4" />
             </button>
