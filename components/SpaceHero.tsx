@@ -1,12 +1,19 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { ArrowUpRight, Menu, Play } from "lucide-react";
 import { motion } from "motion/react";
 import { REVEAL_EASE } from "@/lib/motion";
 import BlurText from "./BlurText";
 
-const navItems = ["Home", "Voyages", "Worlds", "Innovation", "Plan Launch"];
+const navItems = [
+  { label: "Home", href: "/" },
+  { label: "Voyages", href: "/voyages" },
+  { label: "Worlds", href: "/worlds" },
+  { label: "Innovation", href: "/innovation" },
+  { label: "Plan Launch", href: "/plan-launch" },
+];
 const partners = ["Aeon", "Vela", "Apex", "Orbit", "Zeno"];
 
 export default function SpaceHero() {
@@ -43,10 +50,10 @@ export default function SpaceHero() {
                 aria-label="Astral Voyages monogram"
               >
                 <span className="absolute left-[8px] top-[5px] text-[1rem] leading-none text-white/95 font-heading italic sm:left-[9px] sm:top-[6px] sm:text-[1.08rem]">
-                  .
+                  A
                 </span>
                 <span className="absolute left-[18px] top-[14px] text-[0.82rem] leading-none tracking-[0.06em] text-white/82 font-body font-medium sm:left-[21px] sm:top-[16px] sm:text-[0.88rem]">
-                  
+                  V
                 </span>
                 <span className="pointer-events-none absolute inset-[7px] rounded-full border border-white/20 sm:inset-[8px]" />
                 <span className="pointer-events-none absolute inset-[4px] rounded-full border border-white/8 sm:inset-[5px]" />
@@ -55,18 +62,21 @@ export default function SpaceHero() {
 
               <div className="liquid-glass absolute left-1/2 z-[2147483647] hidden -translate-x-1/2 items-center gap-1 rounded-full px-2 py-1 backdrop-blur-xl lg:flex">
                 {navItems.map((item) => (
-                  <a
-                    key={item}
-                    href="#"
+                  <Link
+                    key={item.label}
+                    href={item.href}
                     className="refine-link px-3 py-2 text-sm font-medium text-foreground/90 font-body"
                   >
-                    {item}
-                  </a>
+                    {item.label}
+                  </Link>
                 ))}
-                <button className="refine-button flex items-center gap-1 rounded-full bg-white px-3.5 py-1.5 text-sm font-medium text-black font-body">
+                <Link
+                  href="/plan-launch"
+                  className="refine-button flex items-center gap-1 rounded-full bg-white px-3.5 py-1.5 text-sm font-medium text-black font-body"
+                >
                   Claim a Spot
                   <ArrowUpRight className="h-4 w-4" />
-                </button>
+                </Link>
               </div>
 
               <div className="flex items-center gap-2 lg:hidden">
@@ -86,18 +96,23 @@ export default function SpaceHero() {
               <div className="liquid-glass relative z-[2147483647] rounded-2xl px-3 py-3 backdrop-blur-xl lg:hidden">
                 <div className="flex flex-col gap-1">
                   {navItems.map((item) => (
-                    <a
-                      key={`mobile-${item}`}
-                      href="#"
+                    <Link
+                      key={`mobile-${item.label}`}
+                      href={item.href}
                       className="refine-link rounded-xl px-3 py-2 text-sm font-medium text-foreground/90 font-body"
+                      onClick={() => setIsMenuOpen(false)}
                     >
-                      {item}
-                    </a>
+                      {item.label}
+                    </Link>
                   ))}
-                  <button className="refine-button mt-1 flex items-center justify-center gap-1 rounded-xl bg-white px-3.5 py-2 text-sm font-medium text-black font-body">
+                  <Link
+                    href="/plan-launch"
+                    onClick={() => setIsMenuOpen(false)}
+                    className="refine-button mt-1 flex items-center justify-center gap-1 rounded-xl bg-white px-3.5 py-2 text-sm font-medium text-black font-body"
+                  >
                     Claim a Spot
                     <ArrowUpRight className="h-4 w-4" />
-                  </button>
+                  </Link>
                 </div>
               </div>
             ) : null}

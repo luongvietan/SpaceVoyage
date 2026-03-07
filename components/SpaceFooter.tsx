@@ -1,15 +1,16 @@
 "use client";
 
+import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { motion } from "motion/react";
 import { REVEAL_VIEWPORT, REVEAL_VISIBLE, revealInitial, revealTransition } from "@/lib/motion";
 
 const footerLinks = [
-  { label: "Voyages", href: "#" },
-  { label: "Innovation", href: "#" },
-  { label: "Safety", href: "#" },
-  { label: "Press", href: "#" },
-  { label: "Careers", href: "#" },
+  { label: "Voyages", href: "/voyages" },
+  { label: "Innovation", href: "/innovation" },
+  { label: "Safety", href: "/safety" },
+  { label: "Press", href: "/press" },
+  { label: "Careers", href: "/careers" },
 ];
 
 export default function SpaceFooter() {
@@ -43,9 +44,9 @@ export default function SpaceFooter() {
             <div className="flex flex-col justify-between gap-8">
               <div className="grid grid-cols-2 gap-x-12 gap-y-4 text-sm font-medium font-body">
                 {footerLinks.map((link) => (
-                  <a key={link.label} href={link.href} className="refine-link text-white/85 hover:text-white">
+                  <Link key={link.label} href={link.href} className="refine-link text-white/85 hover:text-white">
                     {link.label}
-                  </a>
+                  </Link>
                 ))}
               </div>
 
@@ -68,15 +69,15 @@ export default function SpaceFooter() {
         >
           <p>© 2026 Astral Voyages. All rights reserved.</p>
           <div className="flex items-center gap-4">
-            <a href="#" className="refine-link hover:text-white">
+            <Link href="/privacy" className="refine-link hover:text-white">
               Privacy
-            </a>
-            <a href="#" className="refine-link hover:text-white">
+            </Link>
+            <Link href="/terms" className="refine-link hover:text-white">
               Terms
-            </a>
-            <a href="#" className="refine-link hover:text-white">
+            </Link>
+            <Link href="/contact" className="refine-link hover:text-white">
               Contact
-            </a>
+            </Link>
           </div>
         </motion.div>
       </div>

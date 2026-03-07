@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import SiteShell from "@/components/SiteShell";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -22,7 +23,9 @@ export default function RootLayout({
           type="video/mp4"
         />
       </head>
-      <body className="antialiased">{children}</body>
+      <body className="antialiased">
+        <SiteShell>{children}</SiteShell>
+      </body>
     </html>
   );
 }
