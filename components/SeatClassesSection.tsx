@@ -36,7 +36,7 @@ export default function SeatClassesSection() {
     <section className="relative min-h-screen overflow-hidden section-blend bg-[#08101f] text-white">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(124,173,234,0.25),transparent_45%),radial-gradient(circle_at_0%_100%,rgba(21,45,81,0.8),transparent_48%)]" />
 
-      <div className="relative z-10 mx-auto max-w-7xl px-6 py-24 md:px-10 lg:px-16">
+      <div className="relative z-10 mx-auto max-w-7xl px-4 py-20 sm:px-6 md:px-10 md:py-24 lg:px-16">
         <motion.div
           className="liquid-glass inline-flex rounded-full px-4 py-1.5 text-xs font-medium tracking-[0.16em] text-white/90 uppercase font-body"
           initial={revealInitial(16, 8)}
@@ -54,7 +54,7 @@ export default function SeatClassesSection() {
           viewport={REVEAL_VIEWPORT}
           transition={revealTransition(0.08, 0.65)}
         >
-          <h2 className="max-w-4xl text-5xl leading-[0.86] tracking-[-2px] font-heading italic md:text-6xl lg:text-7xl">
+          <h2 className="max-w-4xl text-4xl leading-[0.9] tracking-[-1px] font-heading italic sm:text-5xl md:text-6xl lg:text-7xl">
             Select Your Cabin, Define Your Cosmic Perspective
           </h2>
           <p className="max-w-md text-sm leading-relaxed text-white/85 font-body md:text-base">
@@ -62,7 +62,7 @@ export default function SeatClassesSection() {
           </p>
         </motion.div>
 
-        <div className="mt-10 grid gap-5 md:grid-cols-3">
+        <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
           {plans.map((plan, index) => (
             <motion.article
               key={plan.name}

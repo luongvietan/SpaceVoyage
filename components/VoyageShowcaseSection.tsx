@@ -37,7 +37,7 @@ export default function VoyageShowcaseSection() {
     <section className="relative min-h-screen overflow-hidden section-blend bg-[#0f1d33] text-foreground">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(156,188,229,0.32),transparent_45%),radial-gradient(circle_at_bottom,rgba(25,47,82,0.7),transparent_55%)]" />
 
-      <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-col px-6 py-24 md:px-10 lg:px-16">
+      <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-col px-4 py-20 sm:px-6 md:px-10 md:py-24 lg:px-16">
         <motion.div
           className="liquid-glass mb-5 inline-flex w-fit items-center rounded-full px-4 py-1.5 text-xs font-medium tracking-[0.18em] text-foreground/90 uppercase font-body"
           initial={revealInitial(18, 10)}
@@ -49,7 +49,7 @@ export default function VoyageShowcaseSection() {
         </motion.div>
 
         <motion.h2
-          className="max-w-4xl text-5xl leading-[0.86] tracking-[-2px] text-white font-heading italic md:text-6xl lg:text-7xl"
+          className="max-w-4xl text-4xl leading-[0.9] tracking-[-1px] text-white font-heading italic sm:text-5xl md:text-6xl lg:text-7xl"
           initial={revealInitial(28, 10)}
           whileInView={REVEAL_VISIBLE}
           viewport={REVEAL_VIEWPORT}
@@ -70,7 +70,7 @@ export default function VoyageShowcaseSection() {
           perspective.
         </motion.p>
 
-        <div className="mt-10 grid gap-5 md:grid-cols-3">
+        <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
           {voyageCards.map((card, index) => (
             <motion.article
               key={card.destination}

@@ -28,7 +28,7 @@ export default function FaqCtaSection() {
     <section className="relative min-h-screen overflow-hidden section-blend bg-[#060d1a] text-white">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(101,157,226,0.2),transparent_50%),radial-gradient(circle_at_15%_100%,rgba(20,44,78,0.72),transparent_46%)]" />
 
-      <div className="relative z-10 mx-auto max-w-7xl px-6 py-24 md:px-10 lg:px-16">
+      <div className="relative z-10 mx-auto max-w-7xl px-4 py-20 sm:px-6 md:px-10 md:py-24 lg:px-16">
         <motion.div
           className="liquid-glass inline-flex rounded-full px-4 py-1.5 text-xs font-medium tracking-[0.16em] text-white/90 uppercase font-body"
           initial={revealInitial(14, 8)}
@@ -40,7 +40,7 @@ export default function FaqCtaSection() {
         </motion.div>
 
         <motion.h2
-          className="mt-5 max-w-5xl text-5xl leading-[0.86] tracking-[-2px] font-heading italic md:text-6xl lg:text-7xl"
+          className="mt-5 max-w-5xl text-4xl leading-[0.9] tracking-[-1px] font-heading italic sm:text-5xl md:text-6xl lg:text-7xl"
           initial={revealInitial(24, 10)}
           whileInView={REVEAL_VISIBLE}
           viewport={REVEAL_VIEWPORT}
