@@ -14,7 +14,7 @@ const footerLinks = [
 
 export default function SpaceFooter() {
   return (
-    <footer className="relative min-h-screen overflow-hidden border-t border-white/8 bg-[#040a14] text-white">
+    <footer className="relative min-h-screen overflow-hidden section-blend bg-[#040a14] text-white">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_0%,rgba(95,152,224,0.2),transparent_42%),radial-gradient(circle_at_100%_100%,rgba(17,39,72,0.75),transparent_45%)]" />
 
       <div className="relative z-10 mx-auto max-w-7xl px-6 pb-10 pt-20 md:px-10 lg:px-16">

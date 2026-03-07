@@ -25,7 +25,7 @@ const faqs = [
 
 export default function FaqCtaSection() {
   return (
-    <section className="relative min-h-screen overflow-hidden border-t border-white/8 bg-[#060d1a] text-white">
+    <section className="relative min-h-screen overflow-hidden section-blend bg-[#060d1a] text-white">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(101,157,226,0.2),transparent_50%),radial-gradient(circle_at_15%_100%,rgba(20,44,78,0.72),transparent_46%)]" />
 
       <div className="relative z-10 mx-auto max-w-7xl px-6 py-24 md:px-10 lg:px-16">

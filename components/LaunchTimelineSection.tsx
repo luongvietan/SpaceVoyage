@@ -28,7 +28,7 @@ const timeline = [
 
 export default function LaunchTimelineSection() {
   return (
-    <section className="relative min-h-screen overflow-hidden border-t border-white/8 bg-[#0a1323] text-white">
+    <section className="relative min-h-screen overflow-hidden section-blend bg-[#0a1323] text-white">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_0%,rgba(115,161,220,0.34),transparent_42%),radial-gradient(circle_at_90%_80%,rgba(26,55,96,0.72),transparent_48%)]" />
 
       <div className="relative z-10 mx-auto max-w-7xl px-6 py-24 md:px-10 lg:px-16">

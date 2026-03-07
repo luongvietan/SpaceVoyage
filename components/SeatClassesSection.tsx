@@ -33,7 +33,7 @@ const plans = [
 
 export default function SeatClassesSection() {
   return (
-    <section className="relative min-h-screen overflow-hidden border-t border-white/8 bg-[#08101f] text-white">
+    <section className="relative min-h-screen overflow-hidden section-blend bg-[#08101f] text-white">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(124,173,234,0.25),transparent_45%),radial-gradient(circle_at_0%_100%,rgba(21,45,81,0.8),transparent_48%)]" />
 
       <div className="relative z-10 mx-auto max-w-7xl px-6 py-24 md:px-10 lg:px-16">

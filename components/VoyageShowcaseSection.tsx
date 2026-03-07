@@ -34,7 +34,7 @@ const voyageCards = [
 
 export default function VoyageShowcaseSection() {
   return (
-    <section className="relative min-h-screen overflow-hidden border-t border-white/8 bg-[#0f1d33] text-foreground">
+    <section className="relative min-h-screen overflow-hidden section-blend bg-[#0f1d33] text-foreground">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(156,188,229,0.32),transparent_45%),radial-gradient(circle_at_bottom,rgba(25,47,82,0.7),transparent_55%)]" />
 
       <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-col px-6 py-24 md:px-10 lg:px-16">

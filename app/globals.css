@@ -54,6 +54,21 @@ body {
     filter: saturate(0.86) contrast(1.06) brightness(0.9);
   }
 
+  .section-blend {
+    position: relative;
+    isolation: isolate;
+  }
+
+  .section-blend::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto 0;
+    height: 84px;
+    z-index: 1;
+    pointer-events: none;
+    background: linear-gradient(180deg, rgba(5, 10, 18, 0.45) 0%, rgba(5, 10, 18, 0) 100%);
+  }
+
   .liquid-glass {
     background: rgba(255, 255, 255, 0.01);
     background-blend-mode: luminosity;
