@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { motion } from "motion/react";
+import { REVEAL_EASE } from "@/lib/motion";
 
 type BlurTextProps = {
   text: string;
@@ -63,7 +64,7 @@ export default function BlurText({
             }
             transition={{
               duration: 0.35,
-              ease: [0.4, 0, 0.2, 1],
+              ease: REVEAL_EASE,
               delay: (delay / 1000) * index,
             }}
           >

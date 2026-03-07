@@ -1,8 +1,8 @@
 "use client";
 
-import Image from "next/image";
 import { ArrowUpRight, Play } from "lucide-react";
 import { motion } from "motion/react";
+import { REVEAL_EASE } from "@/lib/motion";
 import BlurText from "./BlurText";
 
 const navItems = ["Home", "Voyages", "Worlds", "Innovation", "Plan Launch"];
@@ -12,7 +12,7 @@ export default function SpaceHero() {
   return (
     <section className="relative min-h-screen overflow-hidden bg-background text-foreground">
       <video
-        className="absolute inset-0 z-0 h-full w-full object-cover"
+        className="cinematic-media-source absolute inset-0 z-0 h-full w-full object-cover"
         autoPlay
         loop
         muted
@@ -26,14 +26,30 @@ export default function SpaceHero() {
         />
       </video>
 
-      <div className="absolute inset-0 z-0 bg-black/5" />
+      <div className="cinematic-overlay absolute inset-0 z-0" />
 
-      <div className="relative z-10 min-h-screen">
-        <header className="fixed top-4 left-0 right-0 z-50 px-8 lg:px-16">
+      <div className="relative min-h-screen">
+        <header
+          className="fixed top-4 left-0 right-0 px-8 lg:px-16"
+          style={{ zIndex: 2147483647 }}
+        >
           <nav className="flex items-center justify-between">
-            <Image src="/next.svg" alt="Space Travel" width={48} height={48} className="h-12 w-12" />
+            <div
+              className="liquid-glass-strong relative z-[2147483647] flex h-12 w-12 items-center justify-center rounded-full"
+              aria-label="Astral Voyages monogram"
+            >
+              <span className="absolute -left-[1px] top-[6px] text-[1.08rem] leading-none text-white/95 font-heading italic">
+                .
+              </span>
+              <span className="absolute left-[15px] top-[15px] text-[0.88rem] leading-none tracking-[0.06em] text-white/82 font-body font-medium">
+                
+              </span>
+              <span className="pointer-events-none absolute inset-[7px] rounded-full border border-white/20" />
+              <span className="pointer-events-none absolute inset-[4px] rounded-full border border-white/8" />
+              <span className="pointer-events-none absolute right-[8px] top-[9px] h-[3px] w-[3px] rounded-full bg-white/75 shadow-[0_0_6px_rgba(255,255,255,0.65)]" />
+            </div>
 
-            <div className="liquid-glass hidden items-center gap-1 rounded-full px-2 py-1 md:flex">
+            <div className="liquid-glass relative z-[2147483647] hidden items-center gap-1 rounded-full px-2 py-1 backdrop-blur-xl md:flex">
               {navItems.map((item) => (
                 <a
                   key={item}
@@ -59,7 +75,7 @@ export default function SpaceHero() {
               className="liquid-glass mb-2 flex items-center gap-2 rounded-full px-1 py-1"
               initial={{ filter: "blur(10px)", opacity: 0, y: 20 }}
               animate={{ filter: "blur(0px)", opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1], delay: 0.3 }}
+              transition={{ duration: 0.6, ease: REVEAL_EASE, delay: 0.3 }}
             >
               <span className="rounded-full bg-white px-3 py-1 text-xs font-semibold text-black font-body">
                 New
@@ -81,7 +97,7 @@ export default function SpaceHero() {
               className="mt-1 max-w-2xl text-sm leading-tight text-white font-body font-light md:text-base"
               initial={{ filter: "blur(10px)", opacity: 0, y: 20 }}
               animate={{ filter: "blur(0px)", opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1], delay: 0.8 }}
+              transition={{ duration: 0.6, ease: REVEAL_EASE, delay: 0.8 }}
             >
               Discover the universe in ways once unimaginable. Our pioneering vessels and breakthrough
               engineering bring deep-space exploration within reach-secure and extraordinary.
@@ -91,7 +107,7 @@ export default function SpaceHero() {
               className="mt-4 flex items-center gap-6"
               initial={{ filter: "blur(10px)", opacity: 0, y: 20 }}
               animate={{ filter: "blur(0px)", opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1], delay: 1.1 }}
+              transition={{ duration: 0.6, ease: REVEAL_EASE, delay: 1.1 }}
             >
               <button className="liquid-glass-strong flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium text-foreground font-body">
                 Start Your Voyage
