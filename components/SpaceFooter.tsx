@@ -16,11 +16,22 @@ const footerLinks = [
 export default function SpaceFooter() {
   return (
     <footer className="relative min-h-[88vh] overflow-hidden section-blend bg-[#040a14] text-white">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_0%,rgba(95,152,224,0.2),transparent_42%),radial-gradient(circle_at_100%_100%,rgba(17,39,72,0.75),transparent_45%)]" />
+      <video
+        className="cinematic-media-source absolute inset-0 z-0 h-full w-full object-cover"
+        autoPlay
+        loop
+        muted
+        playsInline
+        preload="auto"
+        poster="/images/hero_bg.jpeg"
+      >
+        <source src="/Flow_delpmaspu_.mp4" type="video/mp4" />
+      </video>
+      <div className="absolute inset-0 z-0 bg-[linear-gradient(180deg,rgba(4,10,20,0.55)_0%,rgba(4,10,20,0.68)_100%),radial-gradient(circle_at_15%_0%,rgba(95,152,224,0.2),transparent_42%),radial-gradient(circle_at_100%_100%,rgba(17,39,72,0.75),transparent_45%)]" />
 
       <div className="relative z-10 mx-auto w-full max-w-[92rem] px-4 pb-12 pt-20 md:px-8 lg:px-12">
         <motion.div
-          className="liquid-glass refine-card min-h-[430px] rounded-[40px] px-8 py-10 md:px-12 md:py-12 lg:px-14 lg:py-14"
+          className="liquid-glass refine-card min-h-[430px] rounded-[40px] px-8 py-10 backdrop-blur-xl md:px-12 md:py-12 lg:px-14 lg:py-14"
           initial={revealInitial(20, 8)}
           whileInView={REVEAL_VISIBLE}
           viewport={REVEAL_VIEWPORT}

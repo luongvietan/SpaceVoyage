@@ -32,10 +32,10 @@ export default function SiteHeader() {
             aria-label="Astral Voyages home"
           >
             <span className="absolute left-[8px] top-[5px] text-[1rem] leading-none text-white/95 font-heading italic sm:left-[9px] sm:top-[6px] sm:text-[1.08rem]">
-              A
+              .
             </span>
             <span className="absolute left-[18px] top-[14px] text-[0.82rem] leading-none tracking-[0.06em] text-white/82 font-body font-medium sm:left-[21px] sm:top-[16px] sm:text-[0.88rem]">
-              V
+              
             </span>
             <span className="pointer-events-none absolute inset-[7px] rounded-full border border-white/20 sm:inset-[8px]" />
             <span className="pointer-events-none absolute inset-[4px] rounded-full border border-white/8 sm:inset-[5px]" />
