@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { motion } from "motion/react";
@@ -39,7 +40,16 @@ export default function SpaceFooter() {
         >
           <div className="grid gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16">
             <div>
-              <p className="text-xs tracking-[0.18em] text-white/70 uppercase font-body">Astral Voyages</p>
+              <div className="flex items-center gap-3">
+                <Image
+                  src="/astral-monogram-logo.svg"
+                  alt="Astral Voyages logo"
+                  width={34}
+                  height={34}
+                  className="h-[34px] w-[34px]"
+                />
+                <p className="text-xs tracking-[0.18em] text-white/70 uppercase font-body">Astral Voyages</p>
+              </div>
               <h2 className="mt-3 max-w-2xl text-5xl leading-[0.88] tracking-[-1px] font-heading italic md:text-6xl">
                 The Future of Travel Is Written Between the Stars
               </h2>

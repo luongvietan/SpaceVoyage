@@ -5,6 +5,11 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Space Travel",
   description: "Cinematic hero for deep-space travel experience",
+  icons: {
+    icon: "/astral-monogram-logo.svg",
+    shortcut: "/astral-monogram-logo.svg",
+    apple: "/astral-monogram-logo.svg",
+  },
 };
 
 export default function RootLayout({
@@ -19,7 +24,7 @@ export default function RootLayout({
         <link
           rel="preload"
           as="video"
-          href="/Flow_delpmaspu_1.mp4"
+          href="/Flow_delpmaspu_.mp4"
           type="video/mp4"
         />
       </head>
